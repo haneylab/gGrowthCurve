@@ -1,0 +1,26 @@
+Package: gGrowthCurve
+Title: TODO
+Date: 2019-04-09
+Version: 0.0.1
+Authors@R: c(
+    person("Wilson", "Andrew", role = c("aut", "cre"), email = "andrew.wilson849@icloud.com"),
+    person("Quentin", "Geissmann", role = c("aut"), email = "qgeissmann@gmail.com")
+    )
+Description: TODO
+Depends: 
+    R (>= 3.00)
+Imports:
+    data.table,
+    ggplot2,
+    R.utils
+Suggests: 
+    testthat,
+    covr,
+    knitr
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/haneylab/gGrowthCurve
+BugReports: https://github.com/haneylab/gGrowthCurve/issues
+RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
