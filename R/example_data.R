@@ -20,3 +20,4 @@ gGrowthCurve_example <- function(path = NULL) {
 #' @export
 gGrowthCurve_example_dir <- function(){
   system.file("extdata", package = "gGrowthCurve")}
+

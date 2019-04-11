@@ -11,9 +11,13 @@
 #' @export 
 import_metadata <- function(file, well_id="well_id", multi_plate=FALSE, plate_id=NULL, ...){
   metadat <- data.table::fread(file)
-  colnames(metadat)[colnames(metadat)==well_id] <- "well_id"
-  if(multi_plate) {
-    if(is.null(plate_id)) stop('You must specify a plate ID column in your metadata file if you want to analyze more than one plate')
-    colnames(metadat)[colnames(metadat)==plate_id] <- "plate_id"
+  if(!(well_id %in% colnames(metadat))){stop("The column name you entered for well_id does not exist in this metadata table")}
+  else {colnames(metadat)[colnames(metadat)==well_id] <- "well_id"}
+  
+  if(multi_plate == TRUE){
+    if(is.null(plate_id)){stop("You must include a plate_id column in your metatdata file if you want to analyze multiple plates")}
+    else if(!(plate_id %in% colnames(metadat))){stop("The column name you entered for plate_id does not exist in this metadata table")}
+    else {colnames(metadat)[colnames(metadat) == plate_id] <- "plate_id"}
   }
+  return(metadat)
 }
