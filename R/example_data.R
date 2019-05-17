@@ -1,7 +1,7 @@
 #' gGrowthCurve_example
-#' 
-#' gGrowthCurve includes example data in its `inst/extdata` directory. 
-#' 
+#'
+#' gGrowthCurve includes example data in its `inst/extdata` directory.
+#'
 #' @param path Name of the file. If `NULL`, it will list all files in `extdata`.
 #' @export
 #' @examples
@@ -18,6 +18,6 @@ gGrowthCurve_example <- function(path = NULL) {
 
 #' @rdname gGrowthCurve_example
 #' @export
-gGrowthCurve_example_dir <- function(){
-  system.file("extdata", package = "gGrowthCurve")}
-
+gGrowthCurve_example_dir <- function() {
+  system.file("extdata", package = "gGrowthCurve")
+}
